@@ -1,4 +1,4 @@
-function largestValues(root: TreeNode | null): number[] {
+export function largestValues(root: TreeNode | null): number[] {
   if (root === null) {
     return [];
   }

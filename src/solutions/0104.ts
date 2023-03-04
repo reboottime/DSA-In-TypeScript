@@ -1,4 +1,4 @@
-function maxDepth(root: TreeNode | null): number {
+export function maxDepth(root: TreeNode | null): number {
   if (root === null) {
     return 0;
   }
