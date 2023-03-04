@@ -22,9 +22,3 @@ function isValidBSTNode(root: TreeNode | null, low: number, high: number): boole
     isValidBSTNode(right, val, high)
   );
 }
-
-interface TreeNode {
-  left: TreeNode;
-  right: TreeNode;
-  val: number;
-}
