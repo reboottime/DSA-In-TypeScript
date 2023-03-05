@@ -7,7 +7,7 @@ export function largestValues(root: TreeNode | null): number[] {
   const queue: TreeNode[] = [root];
 
   while (queue.length) {
-    let curLevelSize = queue.length;
+    const curLevelSize = queue.length;
     let counter = 0;
 
     let curLevelMaxVal = -Infinity;
@@ -33,4 +33,4 @@ export function largestValues(root: TreeNode | null): number[] {
 
 
   return result;
-};
+}
