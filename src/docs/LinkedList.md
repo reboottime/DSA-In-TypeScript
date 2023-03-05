@@ -32,7 +32,8 @@
   ```ts
   const distance = b - (a - 1);
   ```
-- the mirrored node at kth index for an array
+- the mirror node at kth index of an array, 1-index started
+
   ```ts
     const getMirrorIndex = (values: number[], k:number) {
       const length = values.length;
@@ -47,3 +48,8 @@
       return length - k;
     }
   ```
+
+### Patterns
+
+- swap nodes => swap values
+- `ts leftIndex <=rightIndex`
