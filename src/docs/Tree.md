@@ -21,3 +21,4 @@
 
 1. 124, hard, https://leetcode.com/problems/binary-tree-maximum-path-sum/
 2. 96, medium: https://leetcode.com/problems/unique-binary-search-trees/
+3. 236, medium, https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
