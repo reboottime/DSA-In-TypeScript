@@ -22,7 +22,7 @@ function dfs(rooms: number[][], block: TBlock, stepNo: number): void {
 
   if (
     isWithinBorder(rooms, block) &&
-    (rooms[row][column] === BlockTypes.emptyRoom || rooms[row][column] > stepNo)
+    (rooms[row][column] > stepNo)
   ) {
     rooms[row][column] = stepNo;
 
