@@ -1,40 +1,34 @@
 export function search(words: string[], keyword: string): string[] {
-  const searchTerm = keyword.trim();
+  const searchCharacters = keyword.trim().split('');
 
-  if (searchTerm === '') {
+  if (searchCharacters.length === 0) {
     return [];
   }
 
-  if (searchTerm.length === 1) {
-    return words.filter((word) => word.indexOf(searchTerm) != -1);
-  }
-
   let result: string[] = [...words];
-  let location: number[] = [];
+  let characterLocations: number[] = [];
 
-  const searchLetters = searchTerm.split('');
-
-  while (searchLetters.length) {
-    const curLetter = searchLetters.shift() as string;
-    const newLocation: number[] = [];
+  while (searchCharacters.length) {
+    const curCharacter = searchCharacters.shift() as string;
+    const location: number[] = [];
 
     result = result.filter((item, i) => {
-      const curLetterPosition = item.indexOf(curLetter);
-      const prevLetterLocation = location[i] ?? -Infinity;
+      const curLetterPosition = item.indexOf(curCharacter);
+      const prevCharacterrLocation = characterLocations[i] ?? -Infinity;
 
       if (
         (curLetterPosition === -1) ||
-        (prevLetterLocation > curLetterPosition)
+        (prevCharacterrLocation > curLetterPosition)
       ) {
         return false;
       }
 
-      newLocation.push(curLetterPosition);
+      location.push(curLetterPosition);
 
       return true;
     });
 
-    location = newLocation;
+    characterLocations = location;
   }
 
   return result;
