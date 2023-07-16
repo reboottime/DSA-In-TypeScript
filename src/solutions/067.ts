@@ -1,6 +1,6 @@
 function addBinary(a: string, b: string): string {
-  const aNumbers = a.split("").map((n) => parseInt(n));
-  const bNumbers = b.split("").map((n) => parseInt(n));
+  const aNumbers = a.split('').map((n) => parseInt(n));
+  const bNumbers = b.split('').map((n) => parseInt(n));
 
   const result: number[] = [];
   let levelUp = 0;
@@ -31,5 +31,5 @@ function addBinary(a: string, b: string): string {
     result.unshift(levelUp);
   }
 
-  return result.join("");
+  return result.join('');
 }

@@ -1,8 +1,8 @@
 function countAndSay(n: number): string {
-  if (n === 1) return "1";
+  if (n === 1) return '1';
 
   const prev = countAndSay(n - 1);
-  let result = "";
+  let result = '';
   let count = 1;
 
   for (let i = 0; i < prev.length; i++) {

@@ -4,8 +4,8 @@ export function isSameTree(p: TreeNode | null, q: TreeNode | null): boolean {
   }
 
   if (p !== null && q !== null) {
-    let pNodeValue = p.val;
-    let qNodeValue = q.val;
+    const pNodeValue = p.val;
+    const qNodeValue = q.val;
 
     if (pNodeValue === qNodeValue) {
       return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
